@@ -1,17 +1,17 @@
 {
  "schema": 1,
  "config": {
-  "name": "고래치컵",
+  "name": "제1회 고래치컵",
   "startDate": "2026-11-26",
   "days": 10,
   "cutoff": 16,
   "reserves": 2,
   "refreshTime": "10:30"
  },
- "updatedAt": 1795657021385,
+ "updatedAt": 1795657051885,
  "snapshots": [
   {
-   "collectedAt": 1795657021363,
+   "collectedAt": 1795657051867,
    "rooms": [],
    "errors": []
   }
