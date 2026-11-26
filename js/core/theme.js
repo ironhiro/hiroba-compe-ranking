@@ -57,3 +57,32 @@ export function applyTheme(theme, root = document.documentElement) {
   }
   return { brand, ink, onBrand };
 }
+
+// 대회별 폰트. 지정이 없으면 기본 폰트를 그대로 쓴다.
+//
+// event.json
+//   "font": { "family": "Paperlogy", "src": "assets/font.ttf" }
+
+const FONT_STYLE_ID = 'event-font-face';
+const FONT_FAMILY_RE = /^[\p{L}\p{N} _-]{1,64}$/u;
+const FONT_SRC_RE = /^[\w./-]+\.(?:woff2?|ttf|otf)$/i;
+const FONT_FORMATS = Object.freeze({ woff2: 'woff2', woff: 'woff', ttf: 'truetype', otf: 'opentype' });
+
+export function applyFont(font, root = document.documentElement) {
+  if (!font) return null;
+  const family = typeof font.family === 'string' ? font.family.trim() : '';
+  const src = typeof font.src === 'string' ? font.src.trim() : '';
+  if (!FONT_FAMILY_RE.test(family) || !FONT_SRC_RE.test(src) || src.includes('..')) {
+    console.warn('font 설정이 올바르지 않습니다 (family: 글자·숫자·공백, src: 사이트 안의 woff2/woff/ttf/otf 경로).', font);
+    return null;
+  }
+  const format = FONT_FORMATS[src.split('.').pop().toLowerCase()];
+  document.getElementById(FONT_STYLE_ID)?.remove();
+  const style = document.createElement('style');
+  style.id = FONT_STYLE_ID;
+  // 굵기 범위를 넓게 선언해 <strong> 등에서 가짜 굵게(faux bold)가 겹치지 않게 한다.
+  style.textContent = `@font-face { font-family: "${family}"; src: url("${src}") format("${format}"); font-weight: 100 900; font-display: swap; }`;
+  document.head.append(style);
+  root.style.setProperty('--event-font', `"${family}", "Pretendard"`);
+  return family;
+}

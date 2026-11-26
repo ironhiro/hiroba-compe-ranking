@@ -1,6 +1,6 @@
 // 공용 유틸: 데이터 경로, JSON 로딩, 포맷터
 
-import { applyTheme } from './theme.js';
+import { applyFont, applyTheme } from './theme.js';
 
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
 const NUMBER_FORMAT = new Intl.NumberFormat('ko-KR');
@@ -42,6 +42,7 @@ export const formatDateTime = (ms) => new Date(ms).toLocaleString('ko-KR', {
 /** 대회 테마(색)와 헤더(로고·제목·부제)를 적용한다. */
 export function applyEventHeader(event, { title, subtitle, logo }) {
   applyTheme(event?.theme);
+  applyFont(event?.font);
   if (event?.name) {
     title.textContent = event.name;
     document.title = event.name;

@@ -5,6 +5,10 @@
     "brand": "#45a5db",
     "ink": "#035778"
   },
+  "font": {
+    "family": "Paperlogy",
+    "src": "assets/font.ttf"
+  },
   "stages": [
     {
       "id": "qualifier",
