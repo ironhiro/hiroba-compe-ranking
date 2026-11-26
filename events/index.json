@@ -1,4 +1,13 @@
 {
+  "site": {
+    "url": "https://ironhiro.github.io/hiroba-compe-ranking/",
+    "name": "히로바 대회 순위",
+    "description": "동더히로바 대회 예선 순위와 본선 대진표"
+  },
+  "theme": {
+    "brand": "#45a5db",
+    "ink": "#035778"
+  },
   "events": [
     {
       "id": "gorae1",

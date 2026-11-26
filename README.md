@@ -32,7 +32,7 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
    {
      "name": "붕오떡컵",
      "description": "예선 11/26 ~ 12/5 · 본선 12/14",
-     "logo": "assets/logo.png",
+     "logo": "events/<id>/logo.png",
      "theme": { "brand": "#45a5db", "ink": "#035778" },
      "stages": [
        { "id": "qualifier", "type": "qualifier", "title": "예선", "src": "qualifier.json" },
@@ -45,6 +45,7 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
 2. `events/index.json`의 `events`에 `{ "id", "name", "period", "status" }` 추가
    (`status`: `upcoming` · `qualifier` · `main` · `finished`, 목록에서 숨기려면 `"hidden": true`)
 3. 확장 "순위 집계" 설정의 파일 경로를 `events/<id>/qualifier.json`으로 지정
+4. `python tools/build_pages.py` 실행 → 대회 전용 주소 `<id>/` 생성 (아래 "공유 썸네일")
 
 새 단계 종류가 필요하면 `js/components/`에 컴포넌트를 만들고 `js/pages/event.js`의 `STAGE_COMPONENTS`에 등록합니다.
 
@@ -72,7 +73,8 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
 ## 로고와 색
 로고는 바뀔 수 있으므로 색은 CSS에 고정하지 않고 대회 설정에서 정합니다.
 
-- `event.json`의 `logo`: 로고 이미지 경로 (없으면 `assets/logo.png` → `assets/logo.svg`)
+- `event.json`의 `logo`: 대회 로고 경로 (보통 `events/<id>/logo.png`, 없으면 사이트 로고 `assets/site-logo.svg`)
+- 대회 목록(최상위) 페이지는 사이트 로고 `assets/site-logo.svg`·`.png`를 씁니다.
 - `event.json`의 `theme`: 기준색 2개만 지정
   - `brand`: 페이지 배경·강조색 (보통 로고 배경색)
   - `ink`: 테두리·진한 강조색 (흰 바탕에서 읽히는 진한 색)
@@ -81,6 +83,17 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
   brand 위 글자는 밝기에 따라 흰색/진한색을 자동으로 고릅니다.
 - 순위 상승·하락, 후보(노랑), 우승(금색) 같은 의미색은 테마와 무관하게 고정입니다.
 - 대회 목록 페이지 색은 `events/index.json`의 `theme`로 정합니다.
+
+## 공유 썸네일
+카카오톡·디스코드 같은 링크 미리보기는 JS를 실행하지 않아서, 메타 태그가 HTML에 고정돼 있어야 합니다.
+`python tools/build_pages.py`가 다음을 채웁니다.
+
+- `index.html`: 사이트 이름·설명(`events/index.json`의 `site`)과 기본 로고
+- `<id>/index.html`: 대회마다 하나씩 만드는 전용 페이지. 제목·설명은 `event.json`, 썸네일은 대회 `logo`
+  (png/jpg만 됨. 없거나 svg면 사이트 로고 `assets/site-logo.png`)
+- 공유할 때는 `https://…/hiroba-compe-ranking/<id>/` 주소를 씁니다. `event.html?e=<id>`도 그대로 동작하지만 썸네일은 기본값입니다.
+- 대회를 추가하거나 이름·설명·로고를 바꾸면 다시 실행해서 커밋합니다. `<id>/index.html`은 직접 고치지 말고 `event.html`을 고칩니다.
+- 카카오톡은 미리보기를 캐시하므로, 바꾼 뒤에도 예전 썸네일이 보이면 카카오 개발자 도구의 공유 디버거에서 캐시를 지웁니다.
 
 ## 로컬 미리보기
 ```

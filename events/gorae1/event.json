@@ -1,6 +1,7 @@
 {
   "name": "제1회 고래치컵",
   "description": "예선 11/26 ~ 12/6",
+  "logo": "events/gorae1/logo.png",
   "theme": {
     "brand": "#45a5db",
     "ink": "#035778"

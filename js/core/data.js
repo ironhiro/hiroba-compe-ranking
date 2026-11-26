@@ -6,11 +6,15 @@ const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
 const NUMBER_FORMAT = new Intl.NumberFormat('ko-KR');
 
 export const EVENTS_INDEX = 'events/index.json';
-export const DEFAULT_LOGO = 'assets/logo.svg';
+// 사이트 공용 로고. 대회 로고(event.json의 logo)가 없거나 못 불러오면 이걸 쓴다.
+export const DEFAULT_LOGO = 'assets/site-logo.svg';
 
-/** URL의 ?e= 값(대회 id). 경로 조작을 막기 위해 형식을 검사한다. */
+/**
+ * 대회 id. 대회 전용 페이지(<id>/index.html)는 <html data-event>로, event.html은 ?e= 로 받는다.
+ * 경로 조작을 막기 위해 형식을 검사한다.
+ */
 export function currentEventId() {
-  const id = new URLSearchParams(location.search).get('e') ?? '';
+  const id = document.documentElement.dataset.event ?? new URLSearchParams(location.search).get('e') ?? '';
   return SLUG_RE.test(id) ? id : null;
 }
 
@@ -49,7 +53,7 @@ export function applyEventHeader(event, { title, subtitle, logo }) {
   }
   if (subtitle && event?.description) subtitle.textContent = event.description;
   if (logo) {
-    logo.src = event?.logo ?? 'assets/logo.png';
+    logo.src = event?.logo ?? DEFAULT_LOGO;
     logo.addEventListener('error', () => { logo.src = DEFAULT_LOGO; }, { once: true });
   }
 }

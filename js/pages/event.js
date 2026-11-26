@@ -48,8 +48,10 @@ async function main() {
   try {
     event = { id: eventId, ...(await loadJson(eventPath(eventId, 'event.json'))) };
     applyEventHeader(event, els);
+    // 대회 전용 페이지는 <base href="../">를 쓰므로 "#id"만 쓰면 사이트 루트로 이동한다.
+    const here = escapeHtml(`${location.pathname}${location.search}`);
     els.tabs.innerHTML = (event.stages ?? [])
-      .map((stage) => `<a href="#${escapeHtml(stage.id)}" data-stage="${escapeHtml(stage.id)}">${escapeHtml(stage.title)}</a>`)
+      .map((stage) => `<a href="${here}#${escapeHtml(stage.id)}" data-stage="${escapeHtml(stage.id)}">${escapeHtml(stage.title)}</a>`)
       .join('');
     els.tabs.hidden = (event.stages ?? []).length < 2;
     renderStage();

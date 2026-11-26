@@ -21,7 +21,7 @@ async function main() {
     }
     list.innerHTML = visible.map((event) => `
       <li>
-        <a href="event.html?e=${encodeURIComponent(event.id)}">
+        <a href="${encodeURIComponent(event.id)}/">
           <strong>${escapeHtml(event.name)}</strong>
           ${event.period ? `<span>${escapeHtml(event.period)}</span>` : ''}
           ${event.status ? `<em class="badge ${escapeHtml(event.status)}">${escapeHtml(STATUS_LABELS[event.status] ?? event.status)}</em>` : ''}
