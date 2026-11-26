@@ -8,17 +8,17 @@
   "reserves": 2,
   "refreshTime": "10:30"
  },
- "updatedAt": 1795657262569,
+ "updatedAt": 1795686731490,
  "snapshots": [
   {
-   "collectedAt": 1795657262554,
+   "collectedAt": 1795686731451,
    "rooms": [
     {
      "compeId": "55293",
      "no": 1,
      "name": "제1회 고래치컵 예선 #1",
      "host": "붕오떡",
-     "members": "15人（現在5人）",
+     "members": "15人（現在8人）",
      "asOf": null,
      "players": [
       {
@@ -120,6 +120,66 @@
         }
        ],
        "total": null
+      },
+      {
+       "id": "73d2f6bbf098744c",
+       "name": "우메",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "65f185b4aa371f15",
+       "name": "구름속팅민",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "755c3af9235e645d",
+       "name": "타이코랩스",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
       }
      ]
     },
@@ -158,12 +218,32 @@
      "no": 3,
      "name": "제1회 고래치컵 예선 #3",
      "host": "카넬론",
-     "members": "15人（現在1人）",
+     "members": "15人（現在2人）",
      "asOf": null,
      "players": [
       {
        "id": "eb77997cbf828a67",
        "name": "카넬론",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "c943e7726e3f3afd",
+       "name": "초잼",
        "roomRank": null,
        "songs": [
         {
@@ -308,12 +388,72 @@
      "no": 8,
      "name": "제1회 고래치컵 예선 #8",
      "host": "るくてぃ",
-     "members": "15人（現在1人）",
+     "members": "15人（現在4人）",
      "asOf": null,
      "players": [
       {
        "id": "4cbfafb5a33de877",
        "name": "るくてぃ",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "51196444029cfa1f",
+       "name": "쵸단",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "8c68c0f8ef5ad6c1",
+       "name": "짭",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "3bfbf408ccdaa1f5",
+       "name": "Doro",
        "roomRank": null,
        "songs": [
         {
