@@ -10,6 +10,7 @@ events/index.json 의 site.url (사이트 주소)이 필요하다. 대회를 추
 
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
@@ -89,6 +90,41 @@ def replace_meta(page: str, block: str, source: Path) -> str:
     return META_RE.sub(lambda _: block, page, count=1)
 
 
+# ---- 캐시 무효화 -------------------------------------------------------------
+# GitHub Pages는 파일을 10분 캐시한다. 새 HTML이 예전 JS를 불러오면 화면이 깨지므로,
+# js/css 주소 뒤에 내용 해시(?v=)를 붙인다. 모듈끼리의 import는 import map으로 같은 주소에 맞춘다.
+ASSET_DIRS = ("js", "css")
+ASSET_REF_RE = re.compile(r'(src|href)="((?:js|css)/[^"?]+)(?:\?v=[^"]*)?"')
+IMPORT_MAP_RE = re.compile(r'  <script type="importmap">.*?</script>\n', re.S)
+MODULE_TAG = '  <script type="module"'
+OTHER_PAGES = ("event.html", "admin.html")
+
+
+def asset_versions() -> dict[str, str]:
+    versions = {}
+    for folder in ASSET_DIRS:
+        for path in sorted((ROOT / folder).rglob("*")):
+            if path.suffix in (".js", ".css"):
+                rel = path.relative_to(ROOT).as_posix()
+                versions[rel] = hashlib.sha1(path.read_bytes()).hexdigest()[:10]
+    return versions
+
+
+def bust_cache(page: str, versions: dict[str, str]) -> str:
+    def versioned(match: re.Match) -> str:
+        attr, rel = match.group(1), match.group(2)
+        return f'{attr}="{rel}?v={versions[rel]}"' if rel in versions else match.group(0)
+
+    page = ASSET_REF_RE.sub(versioned, page)
+    page = IMPORT_MAP_RE.sub("", page)
+    if MODULE_TAG in page:
+        imports = {f"./{rel}": f"./{rel}?v={ver}" for rel, ver in versions.items() if rel.endswith(".js")}
+        import_map = json.dumps({"imports": imports}, ensure_ascii=False, indent=2).replace("\n", "\n  ")
+        script = f'  <script type="importmap">\n  {import_map}\n  </script>\n'
+        page = page.replace(MODULE_TAG, script + MODULE_TAG, 1)
+    return page
+
+
 def main() -> None:
     index = load_json(EVENTS_DIR / "index.json")
     site = index.get("site") or {}
@@ -98,13 +134,18 @@ def main() -> None:
     site_url = site_url.rstrip("/") + "/"
     site_name = site.get("name") or "대회 순위"
     theme_color = (index.get("theme") or {}).get("brand")
+    versions = asset_versions()
+
+    for name in OTHER_PAGES:
+        path = ROOT / name
+        write_text(path, bust_cache(path.read_text(encoding="utf-8"), versions))
 
     # 대회 목록 페이지
     page = replace_meta(INDEX_PAGE.read_text(encoding="utf-8"), meta_block(
         site_url=site_url, page_path="", title=site_name,
         description=site.get("description") or "", image=DEFAULT_IMAGE, site_name=site_name, color=theme_color,
     ), INDEX_PAGE)
-    write_text(INDEX_PAGE, page)
+    write_text(INDEX_PAGE, bust_cache(page, versions))
     print("index.html")
 
     template = TEMPLATE.read_text(encoding="utf-8")

@@ -8,8 +8,8 @@
   <!-- meta:end -->
   <link rel="icon" href="assets/site-logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/site-logo.png">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/bracket.css">
+  <link rel="stylesheet" href="css/style.css?v=942d77b588">
+  <link rel="stylesheet" href="css/bracket.css?v=7ea25f428f">
 </head>
 <body>
   <header class="hero">
@@ -26,6 +26,21 @@
   <footer>
     <a href="./">대회 목록</a> · 동더히로바 대회 랭킹을 모아 집계한 비공식 페이지입니다.
   </footer>
-  <script type="module" src="js/pages/event.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "./js/components/bracket-view.js": "./js/components/bracket-view.js?v=75e822ef79",
+      "./js/components/qualifier-board.js": "./js/components/qualifier-board.js?v=1a3d149a69",
+      "./js/core/bracket.js": "./js/core/bracket.js?v=bc89c50feb",
+      "./js/core/data.js": "./js/core/data.js?v=e236f93033",
+      "./js/core/github.js": "./js/core/github.js?v=eed7f07002",
+      "./js/core/theme.js": "./js/core/theme.js?v=ff9a9858fc",
+      "./js/pages/admin.js": "./js/pages/admin.js?v=4fed154858",
+      "./js/pages/event.js": "./js/pages/event.js?v=27981a4686",
+      "./js/pages/index.js": "./js/pages/index.js?v=71af2ce6d6"
+    }
+  }
+  </script>
+  <script type="module" src="js/pages/event.js?v=27981a4686"></script>
 </body>
 </html>

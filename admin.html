@@ -6,9 +6,9 @@
   <meta name="robots" content="noindex">
   <title>본선 관리</title>
   <link rel="icon" href="assets/site-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/bracket.css">
-  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/style.css?v=942d77b588">
+  <link rel="stylesheet" href="css/bracket.css?v=7ea25f428f">
+  <link rel="stylesheet" href="css/admin.css?v=e2955f46e5">
 </head>
 <body class="admin">
   <header class="hero">
@@ -75,6 +75,21 @@
     <button id="publish" type="button">GitHub에 게시</button>
   </div>
 
-  <script type="module" src="js/pages/admin.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "./js/components/bracket-view.js": "./js/components/bracket-view.js?v=75e822ef79",
+      "./js/components/qualifier-board.js": "./js/components/qualifier-board.js?v=1a3d149a69",
+      "./js/core/bracket.js": "./js/core/bracket.js?v=bc89c50feb",
+      "./js/core/data.js": "./js/core/data.js?v=e236f93033",
+      "./js/core/github.js": "./js/core/github.js?v=eed7f07002",
+      "./js/core/theme.js": "./js/core/theme.js?v=ff9a9858fc",
+      "./js/pages/admin.js": "./js/pages/admin.js?v=4fed154858",
+      "./js/pages/event.js": "./js/pages/event.js?v=27981a4686",
+      "./js/pages/index.js": "./js/pages/index.js?v=71af2ce6d6"
+    }
+  }
+  </script>
+  <script type="module" src="js/pages/admin.js?v=4fed154858"></script>
 </body>
 </html>
