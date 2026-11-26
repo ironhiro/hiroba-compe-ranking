@@ -8,10 +8,10 @@
   "reserves": 2,
   "refreshTime": "10:30"
  },
- "updatedAt": 1795686731490,
+ "updatedAt": 1795708832626,
  "snapshots": [
   {
-   "collectedAt": 1795686731451,
+   "collectedAt": 1795708832608,
    "rooms": [
     {
      "compeId": "55293",
@@ -103,7 +103,7 @@
       },
       {
        "id": "09c4e27a9ff00ef3",
-       "name": "먕히로",
+       "name": "먀히로",
        "roomRank": null,
        "songs": [
         {
@@ -328,12 +328,32 @@
      "no": 6,
      "name": "제1회 고래치컵 예선 #6",
      "host": "미노",
-     "members": "15人（現在1人）",
+     "members": "15人（現在2人）",
      "asOf": null,
      "players": [
       {
        "id": "891d77d625f36cdc",
        "name": "미노",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "8626008649ffe134",
+       "name": "초딩동더",
        "roomRank": null,
        "songs": [
         {
@@ -358,12 +378,32 @@
      "no": 7,
      "name": "제1회 고래치컵 예선 #7",
      "host": "창태좀",
-     "members": "15人（現在1人）",
+     "members": "15人（現在2人）",
      "asOf": null,
      "players": [
       {
        "id": "f24d7524849a9a07",
        "name": "창태좀",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "c76527b17b329e43",
+       "name": "히다",
        "roomRank": null,
        "songs": [
         {
@@ -388,7 +428,7 @@
      "no": 8,
      "name": "제1회 고래치컵 예선 #8",
      "host": "るくてぃ",
-     "members": "15人（現在4人）",
+     "members": "15人（現在5人）",
      "asOf": null,
      "players": [
       {
@@ -454,6 +494,26 @@
       {
        "id": "3bfbf408ccdaa1f5",
        "name": "Doro",
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "17a700fd8d12e23f",
+       "name": "쿠팡맨",
        "roomRank": null,
        "songs": [
         {
