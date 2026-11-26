@@ -1,0 +1,23 @@
+{
+  "name": "제1회 고래치컵",
+  "description": "예선 11/26 ~ 12/6",
+  "theme": {
+    "brand": "#45a5db",
+    "ink": "#035778"
+  },
+  "stages": [
+    {
+      "id": "qualifier",
+      "type": "qualifier",
+      "title": "예선",
+      "src": "qualifier.json"
+    },
+    {
+      "id": "main",
+      "type": "bracket",
+      "title": "본선",
+      "src": "bracket.json"
+    }
+  ],
+  "defaultStage": "qualifier"
+}

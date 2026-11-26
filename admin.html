@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>본선 관리</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bracket.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+  <header class="hero">
+    <img id="logo" class="logo" src="assets/logo.svg" alt="">
+    <div>
+      <h1 id="title">본선 관리</h1>
+      <p>운영자용 · 대진 배치와 경기 결과 입력</p>
+    </div>
+  </header>
+
+  <main>
+    <details id="connect" class="panel">
+      <summary>GitHub 연결 <span id="connectState" class="pill"></span></summary>
+      <div class="form-grid">
+        <label>소유자 <input id="owner" autocomplete="off"></label>
+        <label>레포 <input id="repo" autocomplete="off"></label>
+        <label>브랜치 <input id="branch" autocomplete="off"></label>
+        <label class="wide">토큰 <input id="token" type="password" autocomplete="off" placeholder="github_pat_… (이 레포 Contents 읽기/쓰기만)"></label>
+      </div>
+      <p class="hint">토큰은 이 브라우저(localStorage)에만 저장됩니다. 공용 PC라면 작업 후 "토큰 지우기"를 눌러 주세요.</p>
+      <div class="actions">
+        <button id="connectBtn" type="button">저장 후 GitHub에서 불러오기</button>
+        <button id="forgetBtn" type="button" class="ghost">토큰 지우기</button>
+      </div>
+    </details>
+
+    <section class="panel">
+      <h2>대진 설정</h2>
+      <div class="form-grid">
+        <label>단계 <select id="stageSelect"></select></label>
+        <label>인원 <select id="size"></select></label>
+        <label class="check"><input id="thirdPlace" type="checkbox"> 3·4위전</label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>대진 배치 <small id="placedInfo"></small></h2>
+      <p class="hint">위에서부터 두 칸씩 한 경기입니다. 예선 통과자·후보가 입력 후보로 뜹니다.</p>
+      <div class="actions">
+        <button id="fillRank" type="button" class="ghost">예선 순위대로 채우기</button>
+        <button id="shuffle" type="button" class="ghost">배치된 선수 무작위 섞기</button>
+        <button id="clearEntrants" type="button" class="ghost">비우기</button>
+      </div>
+      <datalist id="playerNames"></datalist>
+      <div id="entrants" class="entrants"></div>
+      <p id="entrantWarn" class="warn"></p>
+    </section>
+
+    <section class="panel">
+      <h2>경기 결과</h2>
+      <p class="hint">승자를 고르고 "적용"을 누르면 다음 라운드로 올라갑니다. 앞 경기 결과를 바꾸면 영향을 받는 뒤 경기 결과는 무효로 표시됩니다.</p>
+      <div id="results"></div>
+    </section>
+
+    <section class="panel preview-panel">
+      <h2>미리보기</h2>
+      <bracket-view id="preview"></bracket-view>
+    </section>
+  </main>
+
+  <div class="savebar">
+    <span id="saveState">변경 없음</span>
+    <button id="download" type="button" class="ghost">JSON 내려받기</button>
+    <button id="publish" type="button">GitHub에 게시</button>
+  </div>
+
+  <script type="module" src="js/pages/admin.js"></script>
+</body>
+</html>

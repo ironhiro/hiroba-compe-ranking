@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대회</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bracket.css">
+</head>
+<body>
+  <header class="hero">
+    <img id="logo" class="logo" src="assets/logo.svg" alt="">
+    <div>
+      <h1 id="title">대회</h1>
+      <p id="subtitle"></p>
+    </div>
+  </header>
+  <nav id="tabs" class="tabs" aria-label="대회 단계"></nav>
+  <main id="stage" aria-live="polite">
+    <p class="empty">불러오는 중…</p>
+  </main>
+  <footer>
+    <a href="./">대회 목록</a> · 동더히로바 대회 랭킹을 모아 집계한 비공식 페이지입니다.
+  </footer>
+  <script type="module" src="js/pages/event.js"></script>
+</body>
+</html>

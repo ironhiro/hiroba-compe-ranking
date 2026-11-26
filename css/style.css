@@ -1,0 +1,272 @@
+:root {
+  /* 기준색 2개. 대회별로 event.json의 theme가 덮어쓴다 (js/core/theme.js) */
+  --brand: #45a5db;          /* 배경·강조 */
+  --brand-ink: #035778;      /* 테두리·진한 강조 */
+  --on-brand: #fff;          /* brand 위 글자 (밝기에 따라 자동) */
+  --on-ink: #fff;            /* brand-ink 위 글자 (밝기에 따라 자동) */
+  --brand-shadow: 0 2px 0 var(--brand-ink);
+
+  /* 기준색에서 계산되는 색 */
+  --brand-soft: color-mix(in srgb, var(--brand) 16%, #fff);
+  --brand-tint: color-mix(in srgb, var(--brand) 7%, #fff);
+  --ink-strong: color-mix(in srgb, var(--brand-ink) 70%, #000);
+  --muted: color-mix(in srgb, var(--brand-ink) 55%, #8a8a8a);
+  --line: color-mix(in srgb, var(--brand-ink) 18%, #fff);
+
+  /* 의미색: 로고와 무관하게 고정 */
+  --white: #fff;
+  --gold: #f2b705;
+  --reserve-bg: #fff8e1;
+  --reserve-ink: #9a7400;
+  --up: #1d8a4e;
+  --down: #c8402c;
+  --radius: 14px;
+  font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", "Malgun Gothic", "Hiragino Sans", sans-serif;
+  color: var(--ink-strong);
+  font-size: 15px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--brand);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 28px 20px 18px;
+  color: var(--on-brand);
+}
+.hero .logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  border: 3px solid var(--brand-ink);
+  background: var(--brand);
+  flex-shrink: 0;
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(22px, 4vw, 30px);
+  color: var(--on-brand);
+  text-shadow: var(--brand-shadow);
+  letter-spacing: -0.01em;
+}
+.hero p { margin: 4px 0 0; color: var(--on-brand); opacity: .85; font-weight: 600; font-size: 13px; }
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.summary > div {
+  background: var(--white);
+  border: 3px solid var(--brand-ink);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.summary .label { font-size: 12px; color: var(--muted); font-weight: 600; }
+.summary strong { font-size: 17px; }
+
+.legend {
+  color: var(--on-brand);
+  font-size: 13px;
+  margin: 14px 4px 8px;
+}
+.legend b { color: var(--on-brand); }
+
+.board, .unranked, .rooms, .notes {
+  background: var(--white);
+  border: 3px solid var(--brand-ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.head, .row > summary {
+  display: grid;
+  grid-template-columns: 3rem 3.2rem minmax(0, 1fr) 3rem 7.5rem 8.5rem;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+}
+.head {
+  background: var(--brand-ink);
+  color: var(--on-ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+.head span:nth-child(5), .total { text-align: right; }
+
+.row { border-top: 1px solid var(--line); }
+.row:first-of-type { border-top: 0; }
+.row > summary { cursor: pointer; list-style: none; }
+.row > summary::-webkit-details-marker { display: none; }
+.row > summary:hover { background: var(--brand-soft); }
+.row.in { background: var(--brand-tint); }
+.row.reserve { background: var(--reserve-bg); box-shadow: inset 4px 0 var(--reserve-ink); }
+.row.cutline { border-bottom: 3px dashed var(--brand-ink); }
+.row.reserveline { border-bottom: 2px dotted var(--gold); }
+
+.rank {
+  font-weight: 800;
+  font-size: 17px;
+  text-align: center;
+}
+.row:nth-of-type(-n+3) .rank { color: var(--brand-ink); }
+.name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.room { color: var(--muted); font-size: 13px; }
+.total { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+.chg { font-size: 12px; font-weight: 700; text-align: center; }
+.chg.up { color: var(--up); }
+.chg.down { color: var(--down); }
+.chg.same { color: var(--muted); }
+.chg.new { color: var(--brand-ink); }
+
+.status { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
+.status small { color: var(--muted); font-size: 11px; }
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid var(--brand-ink);
+}
+.badge.likely { background: var(--brand); color: var(--on-brand); }
+.badge.final { background: var(--brand-ink); color: var(--on-ink); }
+/* 후보는 색이 아니라 모양(점선 테두리)으로 구분: 테마색이 노랑이어도 "예선 유력"과 헷갈리지 않게 */
+.badge.reserve { background: var(--white); color: var(--reserve-ink); border: 2px dashed var(--reserve-ink); }
+.badge.out { background: var(--white); color: var(--muted); border-color: var(--line); }
+
+.songs {
+  list-style: none;
+  margin: 0;
+  padding: 4px 14px 12px calc(6.2rem + 26px);
+  font-size: 13px;
+}
+.songs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--line);
+  max-width: 420px;
+}
+.songs b { font-variant-numeric: tabular-nums; }
+
+.unranked { margin-top: 14px; padding: 12px 14px; }
+.unranked h2 { margin: 0 0 8px; font-size: 15px; }
+.unranked h2 small { color: var(--muted); font-weight: 500; font-size: 12px; margin-left: 6px; }
+.unranked ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.unranked li {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  font-size: 13px;
+}
+
+.rooms, .notes { margin-top: 14px; padding: 10px 14px; font-size: 13px; }
+.rooms summary, .notes summary { cursor: pointer; font-weight: 700; }
+.rooms ul, .notes ul { margin: 8px 0 0; padding-left: 18px; }
+
+.empty {
+  background: var(--white);
+  border: 3px solid var(--brand-ink);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+.board .empty { border: 0; margin: 0; }
+
+footer {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 8px 20px 32px;
+  color: var(--on-brand);
+  opacity: .9;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .summary { grid-template-columns: repeat(2, 1fr); }
+  .head, .row > summary {
+    grid-template-columns: 2.2rem 2.6rem minmax(0, 1fr) 6.4rem;
+    padding: 9px 10px;
+  }
+  .head span:nth-child(4), .head span:nth-child(6),
+  .row .room, .row .status { display: none; }
+  .row.in .name::after { content: " ●"; color: var(--brand); }
+  .row.reserve .name::after { content: " 후보"; color: var(--reserve-ink); font-size: 11px; }
+  .songs { padding-left: 14px; }
+}
+
+/* ---------- 공통: 링크·탭·대회 목록 ---------- */
+
+qualifier-board { display: block; }
+
+a { color: inherit; }
+footer a { color: inherit; font-weight: 700; }
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  max-width: 880px;
+  margin: 0 auto 14px;
+  padding: 0 16px;
+}
+.tabs[hidden] { display: none; }
+.tabs a {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 3px solid var(--brand-ink);
+  background: var(--white);
+  color: var(--ink-strong);
+  font-weight: 800;
+  text-decoration: none;
+}
+.tabs a[aria-current="page"] { background: var(--brand-ink); color: var(--on-ink); }
+
+.event-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.event-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 3px solid var(--brand-ink);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.event-list a:hover { background: var(--brand-soft); }
+.event-list strong { flex: 1; font-size: 17px; }
+.event-list span { color: var(--muted); font-size: 13px; }
+.event-list em { font-style: normal; }
+.badge.qualifier, .badge.main { background: var(--brand); color: var(--on-brand); }
+.badge.finished { background: var(--brand-ink); color: var(--on-ink); }
+.badge.upcoming { background: var(--white); color: var(--muted); }

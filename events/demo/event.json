@@ -1,0 +1,10 @@
+{
+  "name": "데모컵",
+  "description": "가상 데이터로 만든 예시 대회입니다",
+  "theme": { "brand": "#45a5db", "ink": "#035778" },
+  "stages": [
+    { "id": "qualifier", "type": "qualifier", "title": "예선", "src": "qualifier.json" },
+    { "id": "main", "type": "bracket", "title": "본선", "src": "bracket.json" }
+  ],
+  "defaultStage": "main"
+}

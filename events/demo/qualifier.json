@@ -1,0 +1,2586 @@
+{
+ "schema": 1,
+ "config": {
+  "name": "데모컵",
+  "startDate": "2026-11-26",
+  "days": 10,
+  "cutoff": 16,
+  "refreshTime": "10:30",
+  "reserves": 2
+ },
+ "updatedAt": 1795829460000,
+ "snapshots": [
+  {
+   "collectedAt": 1795829460000,
+   "rooms": [
+    {
+     "compeId": "60001",
+     "no": 1,
+     "name": "데모컵 - #1",
+     "host": "かつ",
+     "members": "15人（現在8人）",
+     "asOf": "11/27",
+     "players": [
+      {
+       "id": "demo1_0",
+       "name": "かつ",
+       "total": 2734372,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 893385
+        },
+        {
+         "name": "君はドコ？",
+         "score": 881582
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 959405
+        }
+       ]
+      },
+      {
+       "id": "demo1_1",
+       "name": "たいこ",
+       "total": 2825464,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 899396
+        },
+        {
+         "name": "君はドコ？",
+         "score": 962807
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 963261
+        }
+       ]
+      },
+      {
+       "id": "demo1_2",
+       "name": "ばち",
+       "total": 2870577,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 952677
+        },
+        {
+         "name": "君はドコ？",
+         "score": 945387
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 972513
+        }
+       ]
+      },
+      {
+       "id": "demo1_3",
+       "name": "ふち",
+       "total": 2817025,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 906134
+        },
+        {
+         "name": "君はドコ？",
+         "score": 956185
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 954706
+        }
+       ]
+      },
+      {
+       "id": "demo1_4",
+       "name": "めん",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo1_5",
+       "name": "ドンだー",
+       "total": 2879655,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 920184
+        },
+        {
+         "name": "君はドコ？",
+         "score": 988360
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 971111
+        }
+       ]
+      },
+      {
+       "id": "demo1_6",
+       "name": "붕어",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo1_7",
+       "name": "떡볶이",
+       "total": 2888313,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 988475
+        },
+        {
+         "name": "君はドコ？",
+         "score": 953275
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 946563
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60002",
+     "no": 2,
+     "name": "데모컵 - #2",
+     "host": "たいこ",
+     "members": "15人（現在12人）",
+     "asOf": "11/27",
+     "players": [
+      {
+       "id": "demo2_0",
+       "name": "하늘",
+       "total": 2792393,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 986250
+        },
+        {
+         "name": "君はドコ？",
+         "score": 905836
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 900307
+        }
+       ]
+      },
+      {
+       "id": "demo2_1",
+       "name": "파도",
+       "total": 2667367,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 899837
+        },
+        {
+         "name": "君はドコ？",
+         "score": 872885
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 894645
+        }
+       ]
+      },
+      {
+       "id": "demo2_2",
+       "name": "구름",
+       "total": 2818425,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 894231
+        },
+        {
+         "name": "君はドコ？",
+         "score": 990589
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 933605
+        }
+       ]
+      },
+      {
+       "id": "demo2_3",
+       "name": "별빛",
+       "total": 2731493,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 981677
+        },
+        {
+         "name": "君はドコ？",
+         "score": 858793
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 891023
+        }
+       ]
+      },
+      {
+       "id": "demo2_4",
+       "name": "태고",
+       "total": 2718478,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 926320
+        },
+        {
+         "name": "君はドコ？",
+         "score": 913216
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 878942
+        }
+       ]
+      },
+      {
+       "id": "demo2_5",
+       "name": "리듬",
+       "total": 2664668,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 858231
+        },
+        {
+         "name": "君はドコ？",
+         "score": 904819
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 901618
+        }
+       ]
+      },
+      {
+       "id": "demo2_6",
+       "name": "비트",
+       "total": 2790712,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 988652
+        },
+        {
+         "name": "君はドコ？",
+         "score": 927228
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 874832
+        }
+       ]
+      },
+      {
+       "id": "demo2_7",
+       "name": "템포",
+       "total": 2710799,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 892539
+        },
+        {
+         "name": "君はドコ？",
+         "score": 904668
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 913592
+        }
+       ]
+      },
+      {
+       "id": "demo2_8",
+       "name": "하모니",
+       "total": 2756839,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 929749
+        },
+        {
+         "name": "君はドコ？",
+         "score": 942106
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 884984
+        }
+       ]
+      },
+      {
+       "id": "demo2_9",
+       "name": "멜로디",
+       "total": 2843395,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 918675
+        },
+        {
+         "name": "君はドコ？",
+         "score": 979451
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 945269
+        }
+       ]
+      },
+      {
+       "id": "demo2_10",
+       "name": "스텝",
+       "total": 2806527,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 927436
+        },
+        {
+         "name": "君はドコ？",
+         "score": 925742
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 953349
+        }
+       ]
+      },
+      {
+       "id": "demo2_11",
+       "name": "どん",
+       "total": 2753410,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 909508
+        },
+        {
+         "name": "君はドコ？",
+         "score": 956234
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 887668
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60003",
+     "no": 3,
+     "name": "데모컵 - #3",
+     "host": "ばち",
+     "members": "15人（現在12人）",
+     "asOf": "11/27",
+     "players": [
+      {
+       "id": "demo3_0",
+       "name": "かつ21",
+       "total": 2777511,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 899589
+        },
+        {
+         "name": "君はドコ？",
+         "score": 908714
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 969208
+        }
+       ]
+      },
+      {
+       "id": "demo3_1",
+       "name": "たいこ22",
+       "total": 2701198,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 866661
+        },
+        {
+         "name": "君はドコ？",
+         "score": 972878
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 861659
+        }
+       ]
+      },
+      {
+       "id": "demo3_2",
+       "name": "ばち23",
+       "total": 2734147,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 873035
+        },
+        {
+         "name": "君はドコ？",
+         "score": 861682
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 999430
+        }
+       ]
+      },
+      {
+       "id": "demo3_3",
+       "name": "ふち24",
+       "total": 2735057,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 944854
+        },
+        {
+         "name": "君はドコ？",
+         "score": 871637
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 918566
+        }
+       ]
+      },
+      {
+       "id": "demo3_4",
+       "name": "めん25",
+       "total": 2841633,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 870669
+        },
+        {
+         "name": "君はドコ？",
+         "score": 988280
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 982684
+        }
+       ]
+      },
+      {
+       "id": "demo3_5",
+       "name": "ドンだー26",
+       "total": 2933116,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 982783
+        },
+        {
+         "name": "君はドコ？",
+         "score": 986164
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 964169
+        }
+       ]
+      },
+      {
+       "id": "demo3_6",
+       "name": "붕어27",
+       "total": 2600221,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 851572
+        },
+        {
+         "name": "君はドコ？",
+         "score": 887244
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 861405
+        }
+       ]
+      },
+      {
+       "id": "demo3_7",
+       "name": "떡볶이28",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo3_8",
+       "name": "하늘29",
+       "total": 2769282,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 884706
+        },
+        {
+         "name": "君はドコ？",
+         "score": 961172
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 923404
+        }
+       ]
+      },
+      {
+       "id": "demo3_9",
+       "name": "파도30",
+       "total": 2753294,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 885707
+        },
+        {
+         "name": "君はドコ？",
+         "score": 982313
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 885274
+        }
+       ]
+      },
+      {
+       "id": "demo3_10",
+       "name": "구름31",
+       "total": 2775285,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 984141
+        },
+        {
+         "name": "君はドコ？",
+         "score": 867755
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 923389
+        }
+       ]
+      },
+      {
+       "id": "demo3_11",
+       "name": "별빛32",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60004",
+     "no": 4,
+     "name": "데모컵 - #4",
+     "host": "ふち",
+     "members": "15人（現在14人）",
+     "asOf": "11/27",
+     "players": [
+      {
+       "id": "demo4_0",
+       "name": "태고33",
+       "total": 2826473,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 988317
+        },
+        {
+         "name": "君はドコ？",
+         "score": 853149
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 985007
+        }
+       ]
+      },
+      {
+       "id": "demo4_1",
+       "name": "리듬34",
+       "total": 2882008,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 995310
+        },
+        {
+         "name": "君はドコ？",
+         "score": 934792
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 951906
+        }
+       ]
+      },
+      {
+       "id": "demo4_2",
+       "name": "비트35",
+       "total": 2699417,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 883416
+        },
+        {
+         "name": "君はドコ？",
+         "score": 881340
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 934661
+        }
+       ]
+      },
+      {
+       "id": "demo4_3",
+       "name": "템포36",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_4",
+       "name": "하모니37",
+       "total": 2836944,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 955105
+        },
+        {
+         "name": "君はドコ？",
+         "score": 957111
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 924728
+        }
+       ]
+      },
+      {
+       "id": "demo4_5",
+       "name": "멜로디38",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_6",
+       "name": "스텝39",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_7",
+       "name": "どん40",
+       "total": 2806746,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 869614
+        },
+        {
+         "name": "君はドコ？",
+         "score": 953179
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 983953
+        }
+       ]
+      },
+      {
+       "id": "demo4_8",
+       "name": "かつ41",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_9",
+       "name": "たいこ42",
+       "total": 2971258,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 979205
+        },
+        {
+         "name": "君はドコ？",
+         "score": 998910
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 993143
+        }
+       ]
+      },
+      {
+       "id": "demo4_10",
+       "name": "ばち43",
+       "total": 2759321,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 912940
+        },
+        {
+         "name": "君はドコ？",
+         "score": 887232
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 959149
+        }
+       ]
+      },
+      {
+       "id": "demo4_11",
+       "name": "ふち44",
+       "total": 2705689,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 909745
+        },
+        {
+         "name": "君はドコ？",
+         "score": 885212
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 910732
+        }
+       ]
+      },
+      {
+       "id": "demo4_12",
+       "name": "めん45",
+       "total": 2779757,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 933816
+        },
+        {
+         "name": "君はドコ？",
+         "score": 902715
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 943226
+        }
+       ]
+      },
+      {
+       "id": "demo4_13",
+       "name": "ドンだー46",
+       "total": 2772444,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 900253
+        },
+        {
+         "name": "君はドコ？",
+         "score": 958779
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 913412
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60005",
+     "no": 5,
+     "name": "데모컵 - #5",
+     "host": "めん",
+     "members": "15人（現在9人）",
+     "asOf": "11/27",
+     "players": [
+      {
+       "id": "demo5_0",
+       "name": "붕어47",
+       "total": 2941805,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 997822
+        },
+        {
+         "name": "君はドコ？",
+         "score": 999122
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 944861
+        }
+       ]
+      },
+      {
+       "id": "demo5_1",
+       "name": "떡볶이48",
+       "total": 2814459,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 987747
+        },
+        {
+         "name": "君はドコ？",
+         "score": 879930
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 946782
+        }
+       ]
+      },
+      {
+       "id": "demo5_2",
+       "name": "하늘49",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo5_3",
+       "name": "파도50",
+       "total": 2891179,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 933605
+        },
+        {
+         "name": "君はドコ？",
+         "score": 965710
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 991864
+        }
+       ]
+      },
+      {
+       "id": "demo5_4",
+       "name": "구름51",
+       "total": 2669987,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 878072
+        },
+        {
+         "name": "君はドコ？",
+         "score": 917000
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 874915
+        }
+       ]
+      },
+      {
+       "id": "demo5_5",
+       "name": "별빛52",
+       "total": 2788496,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 928258
+        },
+        {
+         "name": "君はドコ？",
+         "score": 934228
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 926010
+        }
+       ]
+      },
+      {
+       "id": "demo5_6",
+       "name": "태고53",
+       "total": 2720900,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 904367
+        },
+        {
+         "name": "君はドコ？",
+         "score": 962631
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 853902
+        }
+       ]
+      },
+      {
+       "id": "demo5_7",
+       "name": "리듬54",
+       "total": 2770105,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 931253
+        },
+        {
+         "name": "君はドコ？",
+         "score": 880413
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 958439
+        }
+       ]
+      },
+      {
+       "id": "demo5_8",
+       "name": "비트55",
+       "total": 2748667,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 885357
+        },
+        {
+         "name": "君はドコ？",
+         "score": 948935
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 914375
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60006",
+     "no": 6,
+     "name": "데모컵 - #6",
+     "host": "ドンだー",
+     "members": "15人（現在8人）",
+     "asOf": "11/27",
+     "players": [
+      {
+       "id": "demo6_0",
+       "name": "템포56",
+       "total": 2947247,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 973429
+        },
+        {
+         "name": "君はドコ？",
+         "score": 987316
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 986502
+        }
+       ]
+      },
+      {
+       "id": "demo6_1",
+       "name": "하모니57",
+       "total": 2811912,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 993833
+        },
+        {
+         "name": "君はドコ？",
+         "score": 853782
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 964297
+        }
+       ]
+      },
+      {
+       "id": "demo6_2",
+       "name": "멜로디58",
+       "total": 2798886,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 958605
+        },
+        {
+         "name": "君はドコ？",
+         "score": 984729
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 855552
+        }
+       ]
+      },
+      {
+       "id": "demo6_3",
+       "name": "스텝59",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo6_4",
+       "name": "どん60",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo6_5",
+       "name": "かつ61",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo6_6",
+       "name": "たいこ62",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo6_7",
+       "name": "ばち63",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "errors": []
+  },
+  {
+   "collectedAt": 1795743060000,
+   "rooms": [
+    {
+     "compeId": "60001",
+     "no": 1,
+     "name": "데모컵 - #1",
+     "host": "かつ",
+     "members": "15人（現在8人）",
+     "asOf": "11/26",
+     "players": [
+      {
+       "id": "demo1_0",
+       "name": "かつ",
+       "total": 2722280,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 889174
+        },
+        {
+         "name": "君はドコ？",
+         "score": 948751
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 884355
+        }
+       ]
+      },
+      {
+       "id": "demo1_1",
+       "name": "たいこ",
+       "total": 2725605,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 917737
+        },
+        {
+         "name": "君はドコ？",
+         "score": 929052
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 878816
+        }
+       ]
+      },
+      {
+       "id": "demo1_2",
+       "name": "ばち",
+       "total": 2869070,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 953629
+        },
+        {
+         "name": "君はドコ？",
+         "score": 943229
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 972212
+        }
+       ]
+      },
+      {
+       "id": "demo1_3",
+       "name": "ふち",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo1_4",
+       "name": "めん",
+       "total": 2878353,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 974705
+        },
+        {
+         "name": "君はドコ？",
+         "score": 935015
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 968633
+        }
+       ]
+      },
+      {
+       "id": "demo1_5",
+       "name": "ドンだー",
+       "total": 2666426,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 883564
+        },
+        {
+         "name": "君はドコ？",
+         "score": 896786
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 886076
+        }
+       ]
+      },
+      {
+       "id": "demo1_6",
+       "name": "붕어",
+       "total": 2774599,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 979442
+        },
+        {
+         "name": "君はドコ？",
+         "score": 941833
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 853324
+        }
+       ]
+      },
+      {
+       "id": "demo1_7",
+       "name": "떡볶이",
+       "total": 2629577,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 917892
+        },
+        {
+         "name": "君はドコ？",
+         "score": 860763
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 850922
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60002",
+     "no": 2,
+     "name": "데모컵 - #2",
+     "host": "たいこ",
+     "members": "15人（現在10人）",
+     "asOf": "11/26",
+     "players": [
+      {
+       "id": "demo2_0",
+       "name": "하늘",
+       "total": 2730325,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 978355
+        },
+        {
+         "name": "君はドコ？",
+         "score": 866720
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 885250
+        }
+       ]
+      },
+      {
+       "id": "demo2_1",
+       "name": "파도",
+       "total": 2803512,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 889252
+        },
+        {
+         "name": "君はドコ？",
+         "score": 937442
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 976818
+        }
+       ]
+      },
+      {
+       "id": "demo2_2",
+       "name": "구름",
+       "total": 2784479,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 932583
+        },
+        {
+         "name": "君はドコ？",
+         "score": 917338
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 934558
+        }
+       ]
+      },
+      {
+       "id": "demo2_3",
+       "name": "별빛",
+       "total": 2773990,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 951212
+        },
+        {
+         "name": "君はドコ？",
+         "score": 931017
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 891761
+        }
+       ]
+      },
+      {
+       "id": "demo2_4",
+       "name": "태고",
+       "total": 2858685,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 979412
+        },
+        {
+         "name": "君はドコ？",
+         "score": 971324
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 907949
+        }
+       ]
+      },
+      {
+       "id": "demo2_5",
+       "name": "리듬",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo2_6",
+       "name": "비트",
+       "total": 2669030,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 870353
+        },
+        {
+         "name": "君はドコ？",
+         "score": 862495
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 936182
+        }
+       ]
+      },
+      {
+       "id": "demo2_7",
+       "name": "템포",
+       "total": 2888162,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 964873
+        },
+        {
+         "name": "君はドコ？",
+         "score": 964628
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 958661
+        }
+       ]
+      },
+      {
+       "id": "demo2_8",
+       "name": "하모니",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo2_9",
+       "name": "멜로디",
+       "total": 2750658,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 861374
+        },
+        {
+         "name": "君はドコ？",
+         "score": 937899
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 951385
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60003",
+     "no": 3,
+     "name": "데모컵 - #3",
+     "host": "ばち",
+     "members": "15人（現在12人）",
+     "asOf": "11/26",
+     "players": [
+      {
+       "id": "demo3_0",
+       "name": "스텝",
+       "total": 2723786,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 977610
+        },
+        {
+         "name": "君はドコ？",
+         "score": 888206
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 857970
+        }
+       ]
+      },
+      {
+       "id": "demo3_1",
+       "name": "どん",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo3_2",
+       "name": "かつ21",
+       "total": 2621091,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 927097
+        },
+        {
+         "name": "君はドコ？",
+         "score": 835148
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 858846
+        }
+       ]
+      },
+      {
+       "id": "demo3_3",
+       "name": "たいこ22",
+       "total": 2759434,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 946581
+        },
+        {
+         "name": "君はドコ？",
+         "score": 879238
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 933615
+        }
+       ]
+      },
+      {
+       "id": "demo3_4",
+       "name": "ばち23",
+       "total": 2713063,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 940824
+        },
+        {
+         "name": "君はドコ？",
+         "score": 924074
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 848165
+        }
+       ]
+      },
+      {
+       "id": "demo3_5",
+       "name": "ふち24",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo3_6",
+       "name": "めん25",
+       "total": 2928280,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 983212
+        },
+        {
+         "name": "君はドコ？",
+         "score": 965243
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 979825
+        }
+       ]
+      },
+      {
+       "id": "demo3_7",
+       "name": "ドンだー26",
+       "total": 2754532,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 907976
+        },
+        {
+         "name": "君はドコ？",
+         "score": 941505
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 905051
+        }
+       ]
+      },
+      {
+       "id": "demo3_8",
+       "name": "붕어27",
+       "total": 2815690,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 971872
+        },
+        {
+         "name": "君はドコ？",
+         "score": 890285
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 953533
+        }
+       ]
+      },
+      {
+       "id": "demo3_9",
+       "name": "떡볶이28",
+       "total": 2772962,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 909440
+        },
+        {
+         "name": "君はドコ？",
+         "score": 877048
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 986474
+        }
+       ]
+      },
+      {
+       "id": "demo3_10",
+       "name": "하늘29",
+       "total": 2841301,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 983757
+        },
+        {
+         "name": "君はドコ？",
+         "score": 944075
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 913469
+        }
+       ]
+      },
+      {
+       "id": "demo3_11",
+       "name": "파도30",
+       "total": 2713025,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 982223
+        },
+        {
+         "name": "君はドコ？",
+         "score": 869139
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 861663
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60004",
+     "no": 4,
+     "name": "데모컵 - #4",
+     "host": "ふち",
+     "members": "15人（現在11人）",
+     "asOf": "11/26",
+     "players": [
+      {
+       "id": "demo4_0",
+       "name": "구름31",
+       "total": 2648144,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 910868
+        },
+        {
+         "name": "君はドコ？",
+         "score": 889350
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 847926
+        }
+       ]
+      },
+      {
+       "id": "demo4_1",
+       "name": "별빛32",
+       "total": 2695228,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 865955
+        },
+        {
+         "name": "君はドコ？",
+         "score": 888921
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 940352
+        }
+       ]
+      },
+      {
+       "id": "demo4_2",
+       "name": "태고33",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_3",
+       "name": "리듬34",
+       "total": 2921334,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 955121
+        },
+        {
+         "name": "君はドコ？",
+         "score": 972884
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 993329
+        }
+       ]
+      },
+      {
+       "id": "demo4_4",
+       "name": "비트35",
+       "total": 2778454,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 925676
+        },
+        {
+         "name": "君はドコ？",
+         "score": 983989
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 868789
+        }
+       ]
+      },
+      {
+       "id": "demo4_5",
+       "name": "템포36",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_6",
+       "name": "하모니37",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_7",
+       "name": "멜로디38",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo4_8",
+       "name": "스텝39",
+       "total": 2800396,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 988022
+        },
+        {
+         "name": "君はドコ？",
+         "score": 866003
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 946371
+        }
+       ]
+      },
+      {
+       "id": "demo4_9",
+       "name": "どん40",
+       "total": 2827422,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 990641
+        },
+        {
+         "name": "君はドコ？",
+         "score": 935577
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 901204
+        }
+       ]
+      },
+      {
+       "id": "demo4_10",
+       "name": "かつ41",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60005",
+     "no": 5,
+     "name": "데모컵 - #5",
+     "host": "めん",
+     "members": "15人（現在9人）",
+     "asOf": "11/26",
+     "players": [
+      {
+       "id": "demo5_0",
+       "name": "たいこ42",
+       "total": 2835884,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 993106
+        },
+        {
+         "name": "君はドコ？",
+         "score": 978656
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 864122
+        }
+       ]
+      },
+      {
+       "id": "demo5_1",
+       "name": "ばち43",
+       "total": 2675799,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 874018
+        },
+        {
+         "name": "君はドコ？",
+         "score": 877978
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 923803
+        }
+       ]
+      },
+      {
+       "id": "demo5_2",
+       "name": "ふち44",
+       "total": 2592753,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 853016
+        },
+        {
+         "name": "君はドコ？",
+         "score": 897084
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 842653
+        }
+       ]
+      },
+      {
+       "id": "demo5_3",
+       "name": "めん45",
+       "total": null,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": null
+        },
+        {
+         "name": "君はドコ？",
+         "score": null
+        },
+        {
+         "name": "夜の踊り子",
+         "score": null
+        }
+       ]
+      },
+      {
+       "id": "demo5_4",
+       "name": "ドンだー46",
+       "total": 2887906,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 973060
+        },
+        {
+         "name": "君はドコ？",
+         "score": 955854
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 958992
+        }
+       ]
+      },
+      {
+       "id": "demo5_5",
+       "name": "붕어47",
+       "total": 2746546,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 937833
+        },
+        {
+         "name": "君はドコ？",
+         "score": 894065
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 914648
+        }
+       ]
+      },
+      {
+       "id": "demo5_6",
+       "name": "떡볶이48",
+       "total": 2841077,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 944962
+        },
+        {
+         "name": "君はドコ？",
+         "score": 930343
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 965772
+        }
+       ]
+      },
+      {
+       "id": "demo5_7",
+       "name": "하늘49",
+       "total": 2782130,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 905968
+        },
+        {
+         "name": "君はドコ？",
+         "score": 974081
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 902081
+        }
+       ]
+      },
+      {
+       "id": "demo5_8",
+       "name": "파도50",
+       "total": 2873748,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 968230
+        },
+        {
+         "name": "君はドコ？",
+         "score": 941609
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 963909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "compeId": "60006",
+     "no": 6,
+     "name": "데모컵 - #6",
+     "host": "ドンだー",
+     "members": "15人（現在9人）",
+     "asOf": "11/26",
+     "players": [
+      {
+       "id": "demo6_0",
+       "name": "구름51",
+       "total": 2750632,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 847306
+        },
+        {
+         "name": "君はドコ？",
+         "score": 957324
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 946002
+        }
+       ]
+      },
+      {
+       "id": "demo6_1",
+       "name": "별빛52",
+       "total": 2889499,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 969540
+        },
+        {
+         "name": "君はドコ？",
+         "score": 975643
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 944316
+        }
+       ]
+      },
+      {
+       "id": "demo6_2",
+       "name": "태고53",
+       "total": 2699635,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 866346
+        },
+        {
+         "name": "君はドコ？",
+         "score": 866740
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 966549
+        }
+       ]
+      },
+      {
+       "id": "demo6_3",
+       "name": "리듬54",
+       "total": 2704580,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 979288
+        },
+        {
+         "name": "君はドコ？",
+         "score": 877731
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 847561
+        }
+       ]
+      },
+      {
+       "id": "demo6_4",
+       "name": "비트55",
+       "total": 2683458,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 839379
+        },
+        {
+         "name": "君はドコ？",
+         "score": 981218
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 862861
+        }
+       ]
+      },
+      {
+       "id": "demo6_5",
+       "name": "템포56",
+       "total": 2777561,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 873939
+        },
+        {
+         "name": "君はドコ？",
+         "score": 943669
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 959953
+        }
+       ]
+      },
+      {
+       "id": "demo6_6",
+       "name": "하모니57",
+       "total": 2721118,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 862584
+        },
+        {
+         "name": "君はドコ？",
+         "score": 938121
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 920413
+        }
+       ]
+      },
+      {
+       "id": "demo6_7",
+       "name": "멜로디58",
+       "total": 2722869,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 940700
+        },
+        {
+         "name": "君はドコ？",
+         "score": 937628
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 844541
+        }
+       ]
+      },
+      {
+       "id": "demo6_8",
+       "name": "스텝59",
+       "total": 2731375,
+       "roomRank": null,
+       "songs": [
+        {
+         "name": "夏祭り",
+         "score": 932153
+        },
+        {
+         "name": "君はドコ？",
+         "score": 871055
+        },
+        {
+         "name": "夜の踊り子",
+         "score": 928167
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "errors": []
+  }
+ ]
+}

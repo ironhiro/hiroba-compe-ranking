@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+      "id": "gorae1",
+      "name": "제1회 고래치컵",
+      "period": "예선 11/26 ~ 12/6",
+      "status": "qualifier"
+    },
+    {
+      "id": "demo",
+      "name": "데모컵",
+      "period": "예시 데이터",
+      "status": "main",
+      "hidden": true
+    }
+  ]
+}
