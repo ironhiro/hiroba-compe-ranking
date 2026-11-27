@@ -21,10 +21,18 @@
   --up: #1d8a4e;
   --down: #c8402c;
   --radius: 14px;
+  --fallback-fonts: system-ui, -apple-system, "Segoe UI", "Malgun Gothic", "Hiragino Sans", sans-serif;
   /* 대회 폰트(event.json의 font)가 있으면 --event-font로 앞에 붙는다 */
-  font-family: var(--event-font, "Pretendard"), system-ui, -apple-system, "Segoe UI", "Malgun Gothic", "Hiragino Sans", sans-serif;
+  font-family: var(--event-font, "Pretendard"), var(--fallback-fonts);
   color: var(--ink-strong);
   font-size: 15px;
+}
+
+@font-face {
+  font-family: "CompeSongs";
+  src: url("../assets/CompeSongsFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 * { box-sizing: border-box; }
@@ -172,6 +180,9 @@ main {
   max-width: 420px;
 }
 .songs b { font-variant-numeric: tabular-nums; }
+/* 곡 이름은 모든 대회 공통으로 일본어 한자가 들어 있는 곡 폰트를 쓴다.
+   이 폰트에 한글이 없어서 한글 글자는 대회 폰트로 넘어간다. */
+.songs .song-name { font-family: "CompeSongs", var(--event-font, "Pretendard"), var(--fallback-fonts); }
 
 .unranked { margin-top: 14px; padding: 12px 14px; }
 .unranked h2 { margin: 0 0 8px; font-size: 15px; }

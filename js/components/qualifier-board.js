@@ -121,7 +121,7 @@ function changeMark(player) {
 }
 
 const renderSongs = (player) => (player.songs ?? [])
-  .map((song) => `<li><span>${escapeHtml(song.name)}</span><b>${formatScore(song.score)}</b></li>`)
+  .map((song) => `<li><span class="song-name">${escapeHtml(song.name)}</span><b>${formatScore(song.score)}</b></li>`)
   .join('') || '<li>곡 정보 없음</li>';
 
 function renderRankedRow(player, standings) {
