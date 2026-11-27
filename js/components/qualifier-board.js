@@ -149,6 +149,24 @@ function renderRankedRow(player, standings) {
 const renderUnrankedRow = (player) => `
   <li><span class="name">${escapeHtml(player.name)}</span><span class="room">#${escapeHtml(player.roomNo)}</span></li>`;
 
+const HIROBA_COMPE_URL = 'https://donderhiroba.jp/compe_detail.php?compeid=';
+
+/** "15人（現在8人）" → 현재 인원이 정원 이상이면 true. 형식이 다르면 false. */
+export function isRoomFull(members) {
+  const match = String(members ?? '').match(/(\d+)\s*人\s*[（(]\s*現在\s*(\d+)\s*人/);
+  return match ? Number(match[2]) >= Number(match[1]) : false;
+}
+
+function renderRoom(room) {
+  const label = `<b>#${escapeHtml(room.no)}</b> ${escapeHtml(room.host)}`;
+  const link = /^\d+$/.test(String(room.compeId ?? ''))
+    ? `<a href="${HIROBA_COMPE_URL}${room.compeId}" target="_blank" rel="noopener">${label}</a>`
+    : label;
+  const full = isRoomFull(room.members) ? ' <span class="full">만석입니다</span>' : '';
+  return `
+    <li>${link} · ${escapeHtml(room.members)}${room.asOf ? ` · ${escapeHtml(room.asOf)} 기준` : ''}${full}</li>`;
+}
+
 /** 순위표 본문 HTML */
 export function renderBoard(data) {
   const { config, snapshots } = data ?? {};
@@ -164,8 +182,7 @@ export function renderBoard(data) {
   else if (day !== null && day < 1) dayText = '시작 전';
   else if (day !== null) dayText = `${Math.min(day, Number(config.days))} / ${config.days}일차`;
 
-  const rooms = snapshot.rooms.map((room) => `
-    <li><b>#${escapeHtml(room.no)}</b> ${escapeHtml(room.host)} · ${escapeHtml(room.members)}${room.asOf ? ` · ${escapeHtml(room.asOf)} 기준` : ''}</li>`).join('');
+  const rooms = snapshot.rooms.map(renderRoom).join('');
   const notes = [
     ...(snapshot.errors ?? []),
     ...standings.duplicates.map((d) => `중복 참가(높은 점수만 집계): ${d}`),
@@ -191,7 +208,7 @@ export function renderBoard(data) {
     ${rankedRows || '<p class="empty">아직 점수를 등록한 참가자가 없습니다.</p>'}
   </div>
   ${unranked}
-  <details class="rooms"><summary>방 목록 (${snapshot.rooms.length})</summary><ul>${rooms}</ul></details>
+  <details class="rooms"><summary>방 목록 (${snapshot.rooms.length}) <small>왼쪽의 유저를 클릭하면 대회 정보를 확인할 수 있습니다</small></summary><ul>${rooms}</ul></details>
   ${notes ? `<details class="notes"><summary>참고 (${standings.duplicates.length + (snapshot.errors?.length ?? 0)})</summary><ul>${notes}</ul></details>` : ''}`;
 }
 
