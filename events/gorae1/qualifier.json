@@ -8,22 +8,22 @@
   "reserves": 2,
   "refreshTime": "10:30"
  },
- "updatedAt": 1795743004430,
+ "updatedAt": 1795765915998,
  "snapshots": [
   {
-   "collectedAt": 1795743004413,
+   "collectedAt": 1795765915980,
    "rooms": [
     {
      "compeId": "55293",
      "no": 1,
      "name": "제1회 고래치컵 예선 #1",
      "host": "붕오떡",
-     "members": "15人（現在8人）",
+     "members": "15人（現在9人）",
      "asOf": "11/27",
      "players": [
       {
        "id": "09c4e27a9ff00ef3",
-       "name": "먀히로",
+       "name": "마히로",
        "roomRank": 1,
        "songs": [
         {
@@ -165,6 +165,26 @@
        "id": "65f185b4aa371f15",
        "name": "구름속팅민",
        "roomRank": 5,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "519f16c7cf0bdbfe",
+       "name": "にゅとりの",
+       "roomRank": null,
        "songs": [
         {
          "name": "Silent Jealousy",
