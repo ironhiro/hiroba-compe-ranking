@@ -8,10 +8,10 @@
   "reserves": 2,
   "refreshTime": "10:30"
  },
- "updatedAt": 1795765915998,
+ "updatedAt": 1795784408886,
  "snapshots": [
   {
-   "collectedAt": 1795765915980,
+   "collectedAt": 1795784408868,
    "rooms": [
     {
      "compeId": "55293",
@@ -163,7 +163,7 @@
       },
       {
        "id": "65f185b4aa371f15",
-       "name": "구름속팅민",
+       "name": "팅민",
        "roomRank": 5,
        "songs": [
         {
@@ -348,7 +348,7 @@
      "no": 6,
      "name": "제1회 고래치컵 예선 #6",
      "host": "미노",
-     "members": "15人（現在2人）",
+     "members": "15人（現在3人）",
      "asOf": "11/27",
      "players": [
       {
@@ -375,6 +375,26 @@
        "id": "8626008649ffe134",
        "name": "초딩동더",
        "roomRank": 1,
+       "songs": [
+        {
+         "name": "Silent Jealousy",
+         "score": null
+        },
+        {
+         "name": "練習曲Op.10-4",
+         "score": null
+        },
+        {
+         "name": "詩謳兎揺蕩兎",
+         "score": null
+        }
+       ],
+       "total": null
+      },
+      {
+       "id": "69301671a13d6c1f",
+       "name": "릿키",
+       "roomRank": null,
        "songs": [
         {
          "name": "Silent Jealousy",
