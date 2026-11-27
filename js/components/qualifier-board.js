@@ -164,7 +164,7 @@ function renderRoom(room) {
     : label;
   const full = isRoomFull(room.members) ? ' <span class="full">만석입니다</span>' : '';
   return `
-    <li>${link} · ${escapeHtml(room.members)}${room.asOf ? ` · ${escapeHtml(room.asOf)} 기준` : ''}${full}</li>`;
+    <li>${link} · ${escapeHtml(room.members)}${full}</li>`;
 }
 
 /** 순위표 본문 HTML */
@@ -191,7 +191,7 @@ export function renderBoard(data) {
   const rankedRows = standings.ranked.map((p) => renderRankedRow(p, standings)).join('');
   const unranked = standings.unranked.length ? `
   <section class="unranked">
-    <h2>순위 미정 <small>${standings.unranked.length}명 · 아직 점수 미등록</small></h2>
+    <h2>순위 미정 <small>${standings.unranked.length}명</small></h2>
     <ul>${standings.unranked.map(renderUnrankedRow).join('')}</ul>
   </section>` : '';
 
@@ -200,9 +200,9 @@ export function renderBoard(data) {
     <div><span class="label">진행</span><strong>${escapeHtml(dayText)}</strong></div>
     <div><span class="label">순위 집계</span><strong>${standings.ranked.length}명</strong></div>
     <div><span class="label">순위 미정</span><strong>${standings.unranked.length}명</strong></div>
-    <div><span class="label">기준</span><strong>${formatDateTime(snapshot.collectedAt)}</strong></div>
+    <div><span class="label">데이터 갱신일자</span><strong>${formatDateTime(snapshot.collectedAt)}</strong></div>
   </section>
-  <p class="legend">상위 <b>${standings.cutoff}위</b>까지 ${standings.finalized ? '예선 확정' : '예선 유력'}${standings.reserves > 0 ? ` · <b>${standings.cutoff + 1}${standings.reserves > 1 ? `~${standings.cutoff + standings.reserves}` : ''}위</b>는 ${standings.finalized ? '예비' : '후보'}(취소 시 대체)` : ''} · 같은 점수는 같은 순위 · 행을 누르면 곡별 점수</p>
+  <p class="legend">상위 <b>${standings.cutoff}위</b>는 본선 진출 ${standings.finalized ? '확정' : '유력'}${standings.reserves > 0 ? `, <b>${standings.cutoff + 1}${standings.reserves > 1 ? `~${standings.cutoff + standings.reserves}` : ''}위</b>는 예비후보입니다. 예비후보는 대회 진행사항에 따라 대체될 수 있습니다.` : '입니다.'}</p>
   <div class="board">
     <div class="head"><span>순위</span><span>변동</span><span>플레이어</span><span>방</span><span>총점</span><span>상태</span></div>
     ${rankedRows || '<p class="empty">아직 점수를 등록한 참가자가 없습니다.</p>'}
