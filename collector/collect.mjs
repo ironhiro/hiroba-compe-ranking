@@ -62,10 +62,15 @@ async function login() {
   const password = env.HIROBA_PASSWORD;
   if (!email || !password) throw new CollectError('CONFIG', 'HIROBA_EMAIL / HIROBA_PASSWORD 시크릿이 없습니다.');
 
+  let noCard = false;
   const token = await quietly(async () => {
     const sessionToken = await Func.getSessionToken({ email, password });
-    const cardList = await Func.getCardList({ token: sessionToken });
-    if (!cardList?.length) throw new CollectError('NO_CARD', '계정에 등록된 카드가 없습니다.');
+    const cardList = await Func.getCardList({ token: sessionToken }).catch(() => []);
+    // 카드가 없는 계정은 카드 선택 없이 진행한다(대회 페이지가 열리는지는 compe_top 확인에서 판정).
+    if (!cardList?.length) {
+      noCard = true;
+      return sessionToken;
+    }
     const wanted = env.HIROBA_TAIKO_NO?.trim();
     const card = wanted ? cardList.find((c) => String(c.taikoNumber) === wanted) : cardList[0];
     if (!card) throw new CollectError('NO_CARD', 'HIROBA_TAIKO_NO와 일치하는 카드가 없습니다.');
@@ -80,6 +85,7 @@ async function login() {
   });
 
   if (env.GITHUB_ACTIONS) log(`::add-mask::${token}`);
+  log(noCard ? '로그인 성공 (등록된 카드 없음, 카드 선택 없이 진행)' : '로그인 성공');
   return token;
 }
 
