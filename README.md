@@ -22,7 +22,10 @@ css/                      style.css(공통·예선) · bracket.css · admin.css
 
 events/index.json         대회 목록
 events/<id>/event.json    대회 설정 (이름, 단계)
-events/<id>/qualifier.json  예선 데이터 — 확장이 매일 커밋
+events/<id>/qualifier.json  예선 데이터 — GitHub Actions가 커밋 (아래 "자동 수집")
+
+collector/                히로바 수집 스크립트 (Node, GitHub Actions에서 실행)
+.github/workflows/        collect-ranking.yml(매일 순위) · collect-members.yml(매시간 인원)
 events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
 ```
 
@@ -44,7 +47,11 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
    단계는 필요한 만큼 추가할 수 있습니다(예: 예선만 있는 대회, 본선이 둘인 대회).
 2. `events/index.json`의 `events`에 `{ "id", "name", "period", "status" }` 추가
    (`status`: `upcoming` · `qualifier` · `main` · `finished`, 목록에서 숨기려면 `"hidden": true`)
-3. 확장 "순위 집계" 설정의 파일 경로를 `events/<id>/qualifier.json`으로 지정
+3. `events/<id>/qualifier.json`에 `config`만 넣어 둔다 (`snapshots`는 빈 배열). `status`가 `qualifier`인 동안 자동 수집됩니다.
+   ```json
+   { "schema": 1, "config": { "name": "붕오떡컵 예선", "startDate": "2026-12-10", "days": 10, "cutoff": 16, "reserves": 2, "refreshTime": "10:30" }, "snapshots": [] }
+   ```
+   `name`은 히로바 방 이름에서 " #번호" 앞부분 전체입니다.
 4. `python tools/build_pages.py` 실행 → 대회 전용 주소 `<id>/` 생성 (아래 "공유 썸네일")
 
 새 단계 종류가 필요하면 `js/components/`에 컴포넌트를 만들고 `js/pages/event.js`의 `STAGE_COMPONENTS`에 등록합니다.
@@ -52,8 +59,7 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
 ## 예선
 - 상위 N위 **예선 유력**(마지막 날 반영 후 **예선 확정**), 다음 M명 **후보**(취소 시 대체), 점수 미등록은 **순위 미정**
 - 전날 대비 순위 변동, 컷까지 남은 점수, 곡별 점수
-- 데이터는 Chrome 확장 **히로바 대회 도우미**(`D:\Code\HirobaCompeScheduler`)가 매일 갱신합니다.
-  공개되는 값은 방 정보·플레이어 이름·점수뿐이고, 태고 번호는 해시로 바꿔 올립니다.
+- 공개되는 값은 방 정보·플레이어 이름·점수뿐이고, 태고 번호는 해시로 바꿔 올립니다.
 
 ## 본선 (관리 페이지)
 `admin.html?e=<id>` — 현장 운영자가 노트북이나 폰에서 사용합니다.
@@ -65,9 +71,30 @@ events/<id>/bracket.json    본선 데이터 — 관리 페이지에서 커밋
   다른 사람이 먼저 저장했으면 덮어쓰지 않고 다시 불러오라고 알려줍니다.
 - 토큰이 없을 때는 **JSON 내려받기** 후 직접 커밋해도 됩니다.
 
+## 자동 수집 (GitHub Actions)
+| 워크플로 | 시각 (KST) | 하는 일 |
+|---|---|---|
+| `collect-ranking.yml` | 매일 10:30 (히로바 기록 갱신 10:00 이후) | 방 검색 → 상세 → 랭킹, 게임 일자별 스냅샷 추가 (최신 + 전날만 유지) |
+| `collect-members.yml` | 매시간 05분 | 최신 스냅샷의 방 인원·주최만 갱신, 새 방 추가. 바뀐 게 있을 때만 커밋 |
+
+- 예약 실행은 GitHub 사정으로 수~수십 분 늦을 수 있습니다. Actions 탭 → 워크플로 → **Run workflow**로 바로 돌릴 수 있습니다(`dry_run`: 저장 없이 확인, `force`: 기간 밖에도 실행).
+- 방이 하나도 안 잡히면(이름 오입력 등) 게시하지 않고 실패로 끝납니다.
+- 예선 시작 전, 최종 집계(종료 다음 날 갱신 시각) 이후에는 자동으로 건너뜁니다.
+
+**Secrets** (Settings → Secrets and variables → Actions)
+| 이름 | 내용 |
+|---|---|
+| `HIROBA_EMAIL` · `HIROBA_PASSWORD` | 반다이남코 ID. 운영 전용 부계정 권장 |
+| `HIROBA_ID_SALT` | 플레이어 ID 해시용 salt. 확장의 `playerIdSalt`와 같아야 기존 데이터와 ID가 이어집니다 |
+| `HIROBA_TAIKO_NO` | (선택) 로그인할 카드의 태고 번호. 없으면 첫 카드 |
+
+이 레포는 Public이라 Actions 로그도 공개됩니다. 스크립트는 로그인 중 콘솔 출력을 막고 세션 토큰을 마스킹합니다. 로그에 계정 정보를 찍는 코드를 넣지 마세요.
+
+로그인·수집에는 [hiroba-js](https://github.com/hotsixman/hiroba.js) (MIT)를 씁니다.
+
 ## 배포
 1. 이 폴더를 GitHub 레포로 올리고 Settings → Pages → `main` / `/ (root)`
-2. Fine-grained 토큰: 이 레포만, **Contents: Read and write** (확장·관리 페이지 공용으로 써도 됨)
+2. Fine-grained 토큰: 이 레포만, **Contents: Read and write** (관리 페이지용)
 3. GitHub Pages는 최대 10분 정도 캐시될 수 있어, 게시 직후 바로 안 바뀌어 보일 수 있습니다.
 
 ## 로고와 색

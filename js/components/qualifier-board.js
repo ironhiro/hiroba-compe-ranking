@@ -208,7 +208,7 @@ export function renderBoard(data) {
     ${rankedRows || '<p class="empty">아직 점수를 등록한 참가자가 없습니다.</p>'}
   </div>
   ${unranked}
-  <details class="rooms"><summary>방 목록 (${snapshot.rooms.length}) <small>왼쪽의 유저를 클릭하면 대회 정보를 확인할 수 있습니다</small></summary><ul>${rooms}</ul></details>
+  <details class="rooms"><summary>방 목록 (${snapshot.rooms.length})${snapshot.membersAt && snapshot.membersAt !== snapshot.collectedAt ? ` <small>인원 갱신 ${escapeHtml(formatDateTime(snapshot.membersAt))}</small>` : ''} <small>왼쪽의 유저를 클릭하면 대회 정보를 확인할 수 있습니다</small></summary><ul>${rooms}</ul></details>
   ${notes ? `<details class="notes"><summary>참고 (${standings.duplicates.length + (snapshot.errors?.length ?? 0)})</summary><ul>${notes}</ul></details>` : ''}`;
 }
 

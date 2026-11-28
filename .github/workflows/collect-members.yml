@@ -1,0 +1,77 @@
+name: 방 인원 갱신
+
+on:
+  schedule:
+    # 매시간 05분 (정각은 GitHub 예약 실행이 몰려 늦어지기 쉬움). 바뀐 게 있을 때만 커밋한다.
+    - cron: '5 * * * *'
+  workflow_dispatch:
+    inputs:
+      event:
+        description: '대회 id (비우면 status가 qualifier인 대회 전부)'
+        required: false
+        default: ''
+      dry_run:
+        description: '저장·커밋 없이 수집만 해 보기'
+        type: boolean
+        default: false
+      force:
+        description: '기간·최종 집계 여부와 상관없이 수집'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-ranking
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Seoul
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: collector/package-lock.json
+
+      - name: 의존성 설치
+        working-directory: collector
+        run: npm ci --no-audit --no-fund
+
+      - name: 순위 수집
+        working-directory: collector
+        env:
+          HIROBA_EMAIL: ${{ secrets.HIROBA_EMAIL }}
+          HIROBA_PASSWORD: ${{ secrets.HIROBA_PASSWORD }}
+          HIROBA_ID_SALT: ${{ secrets.HIROBA_ID_SALT }}
+          HIROBA_TAIKO_NO: ${{ secrets.HIROBA_TAIKO_NO }}
+          EVENT: ${{ inputs.event }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          FORCE: ${{ inputs.force && '1' || '0' }}
+          MODE: members
+        run: node collect.mjs
+
+      - name: 커밋·푸시
+        # 일부 대회만 실패해도 성공한 대회는 게시한다
+        if: ${{ !cancelled() && !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add events/*/qualifier.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git commit -m "members: $(date -u +%Y-%m-%dT%H:%M:%SZ) (actions)"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs && git push && exit 0
+            sleep 5
+          done
+          exit 1

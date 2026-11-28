@@ -1,0 +1,14 @@
+{
+  "name": "hiroba-ranking-collector",
+  "private": true,
+  "type": "module",
+  "description": "GitHub Actions에서 히로바 대회 순위를 수집해 events/<id>/qualifier.json을 갱신한다.",
+  "scripts": {
+    "collect": "node collect.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "hiroba-js": "2.5.0",
+    "linkedom": "^0.18.12"
+  }
+}
