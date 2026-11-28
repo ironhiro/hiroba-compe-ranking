@@ -32,6 +32,7 @@ const MODE = env.MODE?.trim() || 'ranking';
 const sleep = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
 const log = (...args) => console.log(...args);
 const summary = [];
+let loginHadNoCard = false;
 
 class CollectError extends Error {
   constructor(code, message, { retryable = false } = {}) {
@@ -85,6 +86,7 @@ async function login() {
   });
 
   if (env.GITHUB_ACTIONS) log(`::add-mask::${token}`);
+  loginHadNoCard = noCard;
   log(noCard ? '로그인 성공 (등록된 카드 없음, 카드 선택 없이 진행)' : '로그인 성공');
   return token;
 }
@@ -108,7 +110,13 @@ async function searchRooms(getDoc, seriesName, knownIds) {
   const base = seriesName.normalize('NFKC').replace(/\s+/g, ' ').trim();
 
   const top = await getDoc('/compe_top.php');
-  if (top.path !== '/compe_top.php') throw new CollectError('NOT_LOGGED_IN', '히로바 세션이 유효하지 않습니다.', { retryable: true });
+  if (top.path !== '/compe_top.php') {
+    if (loginHadNoCard) {
+      // 카드 없는 계정은 다시 로그인해도 같으므로 재시도하지 않는다.
+      throw new CollectError('NO_CARD', `카드가 등록되지 않은 계정이라 히로바 대회 페이지를 열 수 없습니다 (${top.path}로 이동). 계정에 카드를 등록하고 한 번 플레이해야 합니다.`);
+    }
+    throw new CollectError('NOT_LOGGED_IN', '히로바 세션이 유효하지 않습니다.', { retryable: true });
+  }
 
   const found = new Map();
   const unmatched = new Set();
